@@ -23,6 +23,10 @@ html {
   overflow: hidden;
   color: #191919;
   background-color: lightgrey;
+  background-image: url("background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 button {
@@ -40,6 +44,8 @@ button {
   outline: inherit;
   z-index: 10;
 }
+
+
 
 .clearfix::after {
     content: "";
@@ -67,21 +73,31 @@ button {
 
 .card {
   background-color: #f4f1eb;
-  background-image: url("./paper-fibers.png");
   height: 200px;
   width: 350px;
-  margin: 20vh auto 0 auto;
+  margin: 20vh 5vw 0 auto;
   padding: 20px 10px 10px 10px;
-  transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+  transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg);
   /*transform-origin: 50% 100%;*/
   box-shadow: 0;
   transition: transform .4s ease,
               box-shadow .4s ease;
 }
 
+.second {
+  margin: 10vh auto 0 5vw;
+  transform: rotateX(50deg) rotateY(0deg) rotateZ(30deg);
+}
+
 .card:hover {
   cursor: pointer;
   transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
+}
+
+.second:hover {
+  cursor: pointer;
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(20deg) translateZ(10px);
   box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
 }
 
@@ -149,5 +165,23 @@ p {
 }
 
 .divider {
-  border-top: 3px solid #bbb;
+  border-top: 2px solid #bbb;
+  /*border-radius: 5px;*/
+  text-align: center;
+}
+.divider:nth-child(0) {
+  width: 70%;
+}
+.button {
+  background-image: url("front.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.second {
+  background-image: url("back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
