@@ -27,6 +27,7 @@ body {
   padding: 12px;
   background: #343434;
   color: white;
+  overflow: hidden;
   font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 24px;
   text-rendering: optimizeLegibility;
