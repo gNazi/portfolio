@@ -49,10 +49,10 @@ a {
           animation: pulseColor 1000ms linear 3100ms forwards;
   font-weight: 500;
 }
-a:hover b, a:focus b {
+a:hover span, a:focus span {
   color: #F04F54;
 }
-a:active b {
+a:active span {
   color: #43CB9D;
 }
 
