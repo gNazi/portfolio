@@ -437,6 +437,7 @@ button {
   padding: 20px 10px 20px 10px;
   margin: 20vh 5vw 0 auto;
   padding: 20px 10px 10px 10px;*/
+  -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg);
   transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg);
   /*transform-origin: 50% 100%;*/
   box-shadow: 0;
@@ -462,32 +463,38 @@ button {
 .second {
   /*margin: 10vh auto 0 5vw;
   margin: 10vh auto 0 5vw;*/
+  -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(30deg);
   transform: rotateX(50deg) rotateY(0deg) rotateZ(30deg);
 }
 
 .card:hover {
   cursor: pointer;
+  -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
   transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
   box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
 }
 
 .second:hover {
   cursor: pointer;
+  -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(20deg) translateZ(10px);
   transform: rotateX(60deg) rotateY(0deg) rotateZ(20deg) translateZ(10px);
   box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
 }
 
 .card:focus {
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(10px);
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(10px);
   box-shadow: 0px 10px 10px rgba(0, 0, 0, .4);
 }
 
 .card:focus::before {
+  -webkit-transform: skewX(0deg) translateX(0px) translateY(0px);
   transform: skewX(0deg) translateX(0px) translateY(0px);
   height: 0px;
 }
 
 .card:focus::after {
+  -webkit-transform: skewY(0deg) translateX(0px) translateY(0px);
   transform: skewY(0deg) translateX(0px) translateY(0px);
   width: 0px;
 }
@@ -508,6 +515,7 @@ button {
   height: 6px;
   bottom: 0;
   left: 0;
+  -webkit-transform: skewX(45deg) translateX(-3px) translateY(6px);
   transform: skewX(45deg) translateX(-3px) translateY(6px);
 }
 
@@ -516,5 +524,6 @@ button {
   width: 6px;
   top: 0;
   right: 0;
+  -webkit-transform: skewY(45deg) translateX(6px) translateY(-3px);
   transform: skewY(45deg) translateX(6px) translateY(-3px);
 }
