@@ -38,6 +38,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@media only screen and (max-width: 600px){
+	body{
+		flex-direction: column;
+	}
+}
+
 ::-moz-selection {
   background: none;
 }
@@ -427,8 +433,6 @@ button {
 
 .card {
   background-color: #f4f1eb;
-  height: 206px;
-  width: 350px;
   /*margin: 10vh 1vw 10vh 1vw;
   padding: 20px 10px 20px 10px;
   margin: 20vh 5vw 0 auto;
@@ -438,6 +442,21 @@ button {
   box-shadow: 0;
   transition: transform .4s ease,
               box-shadow .4s ease;
+}
+
+@media only screen and (max-width: 600px){
+	.card{
+		height: 194px;
+		width: 330px;
+		margin-left: 50px;
+	}
+}
+
+@media only screen and (min-width: 600px){
+	.card{
+		height: 206px;
+		width: 350px;
+	}
 }
 
 .second {
