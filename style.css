@@ -1,5 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 *, *:before, *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * {
@@ -22,12 +30,16 @@ body, html {
 
 body {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-          align-items: center;
-  align-content: center;
+          -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-pack: center;
-          justify-content: center;
+          -ms-flex-pack: center;
+      justify-content: center;
   padding: 12px;
   background: #343434;
   color: white;
@@ -40,7 +52,10 @@ body {
 
 @media only screen and (max-width: 600px){
 	body{
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 }
 
@@ -89,25 +104,33 @@ svg {
 }
 
 img {
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	width: 100%;
 }
 
 #main {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-          align-items: center;
-  align-content: center;
+          -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-pack: center;
-          justify-content: center;
+          -ms-flex-pack: center;
+      justify-content: center;
 }
 #main > div {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-          align-items: center;
-  align-content: center;
+          -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   position: relative;
   overflow: hidden;
 }
@@ -132,14 +155,16 @@ img {
 #main > div:first-child span:first-child {
   opacity: 0;
   -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+          -ms-transform: translateX(100%);
+      transform: translateX(100%);
   -webkit-animation: translateLeft 1000ms linear 1250ms forwards;
           animation: translateLeft 1000ms linear 1250ms forwards;
 }
 #main > div:first-child span:last-child {
   opacity: 0;
   -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+          -ms-transform: translateX(100%);
+      transform: translateX(100%);
   -webkit-animation: translateLeft 1000ms linear 1450ms forwards;
           animation: translateLeft 1000ms linear 1450ms forwards;
 }
@@ -154,14 +179,16 @@ img {
 #main > div:last-child span:first-child {
   opacity: 0;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
   -webkit-animation: translateRight 1000ms linear 1650ms forwards;
           animation: translateRight 1000ms linear 1650ms forwards;
 }
 #main > div:last-child span:last-child {
   opacity: 0;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
   -webkit-animation: translateRight 1000ms linear 1850ms forwards;
           animation: translateRight 1000ms linear 1850ms forwards;
 }
@@ -440,9 +467,20 @@ button {
   -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg);
   transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg);
   /*transform-origin: 50% 100%;*/
-  box-shadow: 0;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: -webkit-transform .4s ease,
+              -webkit-box-shadow .4s ease;
+  transition: -webkit-transform .4s ease,
+              -webkit-box-shadow .4s ease;
+  -o-transition: transform .4s ease,
+              box-shadow .4s ease;
   transition: transform .4s ease,
               box-shadow .4s ease;
+  transition: transform .4s ease,
+              box-shadow .4s ease,
+              -webkit-transform .4s ease,
+              -webkit-box-shadow .4s ease;
 }
 
 @media only screen and (max-width: 600px){
@@ -471,31 +509,36 @@ button {
   cursor: pointer;
   -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
   transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
 }
 
 .second:hover {
   cursor: pointer;
   -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(20deg) translateZ(10px);
   transform: rotateX(60deg) rotateY(0deg) rotateZ(20deg) translateZ(10px);
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
 }
 
 .card:focus {
   -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(10px);
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(10px);
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, .4);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, .4);
 }
 
 .card:focus::before {
   -webkit-transform: skewX(0deg) translateX(0px) translateY(0px);
-  transform: skewX(0deg) translateX(0px) translateY(0px);
+  -ms-transform: skewX(0deg) translateX(0px) translateY(0px);
+      transform: skewX(0deg) translateX(0px) translateY(0px);
   height: 0px;
 }
 
 .card:focus::after {
   -webkit-transform: skewY(0deg) translateX(0px) translateY(0px);
-  transform: skewY(0deg) translateX(0px) translateY(0px);
+  -ms-transform: skewY(0deg) translateX(0px) translateY(0px);
+      transform: skewY(0deg) translateX(0px) translateY(0px);
   width: 0px;
 }
 
@@ -505,9 +548,22 @@ button {
   position: absolute;
   display: block;
   background-color: grey;
+  -webkit-transition: height .4s ease,
+              width .4s ease,
+              -webkit-transform .4s ease;
+  transition: height .4s ease,
+              width .4s ease,
+              -webkit-transform .4s ease;
+  -o-transition: transform .4s ease,
+              height .4s ease,
+              width .4s ease;
   transition: transform .4s ease,
               height .4s ease,
               width .4s ease;
+  transition: transform .4s ease,
+              height .4s ease,
+              width .4s ease,
+              -webkit-transform .4s ease;
 }
 
 .card::before {
@@ -516,7 +572,8 @@ button {
   bottom: 0;
   left: 0;
   -webkit-transform: skewX(45deg) translateX(-3px) translateY(6px);
-  transform: skewX(45deg) translateX(-3px) translateY(6px);
+  -ms-transform: skewX(45deg) translateX(-3px) translateY(6px);
+      transform: skewX(45deg) translateX(-3px) translateY(6px);
 }
 
 .card::after {
@@ -525,5 +582,6 @@ button {
   top: 0;
   right: 0;
   -webkit-transform: skewY(45deg) translateX(6px) translateY(-3px);
-  transform: skewY(45deg) translateX(6px) translateY(-3px);
+  -ms-transform: skewY(45deg) translateX(6px) translateY(-3px);
+      transform: skewY(45deg) translateX(6px) translateY(-3px);
 }
