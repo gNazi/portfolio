@@ -90,8 +90,19 @@ svg {
 .crack {
   position: relative;
   z-index: 4;
-  margin-left: -50px;
 }
+@media only screen and (max-width: 600px){
+	.crack{
+		margin-left: -37.5px;
+	}
+}
+
+@media only screen and (min-width: 600px){
+	.crack{
+		margin-left: -50px;
+	}
+}
+
 .crack polyline {
   fill: none;
   stroke: #F04F54;
@@ -176,7 +187,16 @@ img {
 }
 #main > div:last-child {
   z-index: 0;
-  margin-left: -50px;
+}
+@media only screen and (max-width: 600px){
+	#main > div:last-child{
+		margin-left: -37.5px;
+	}
+}
+@media only screen and (min-width: 600px){
+	#main > div:last-child{
+		margin-left: -50px;
+	}
 }
 #main > div:last-child span:first-child {
   opacity: 0;
