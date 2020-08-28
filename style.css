@@ -122,6 +122,7 @@ img {
   -webkit-box-pack: center;
           -ms-flex-pack: center;
       justify-content: center;
+	  margin-left: 60px;
 }
 #main > div {
   display: -webkit-box;
